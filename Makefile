@@ -7,6 +7,8 @@ SRC = ft_memset.c \
 	  ft_memccpy.c \
 	  ft_memmove.c \
 	  ft_bzero.c \
+	  ft_memchr.c \
+	  ft_memcmp.c \
 
 all: $(NAME)
 

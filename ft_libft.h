@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/06 21:21:17 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 16:14:17 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,9 @@ void    ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *dest, const void *src, size_t n);
 
 void    *ft_memccpy(void *dest, const void *src, int c, size_t n);
+
+void    *ft_memchr(const void *s, int c, size_t n);
+
+int     ft_memcmp(const void *m1, const void *m2, size_t n);
 
 #endif
