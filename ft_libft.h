@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 19:07:48 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 20:00:23 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ int     ft_isprint(int c);
 int     ft_toupper(int c);
 
 int     ft_tolower(int c);
+
+void    *ft_memalloc(size_t size);
 
 #endif
