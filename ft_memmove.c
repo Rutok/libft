@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:20:10 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 15:13:06 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 16:59:41 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     size_t  l;
     size_t  i;
 
-    buffer = (char *)malloc(n);
+    if (!(buffer = (char *)malloc(n)))
+        return (NULL);
     d = (char *)dest;
     s = (char *)src;
     l = n;
