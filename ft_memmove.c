@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:20:10 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 15:04:03 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 15:13:06 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     i = 0;
     while (l--)
         buffer[i++] = *s++;
+    i = 0;
     while (n--)
-        *d++ = *buffer++;
+        *d++ = buffer[i++];
+    free(buffer);
     return (dest);
 }
