@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 20:02:13 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 22:11:53 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,39 @@ int     ft_tolower(int c);
 void    *ft_memalloc(size_t size);
 
 void    ft_memdel(void **ap);
+
+char    *ft_strnew(size_t size);
+
+void    ft_strdel(char **as);
+
+void    ft_strclr(char *s);
+
+void    ft_striter(char *s, void (*f)(char *));
+
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+char    *ft_strmap(const char *s, char (*f)(char));
+
+char    *ft_strmapi(const char *s, char (*f)(unsigned int, char));
+
+int     ft_strequ(const char *s1, const char *s2);
+
+int     ft_strnequ(const char *s1, const char *s2, size_t n);
+
+char    *ft_strsub(const char *s, unsigned int start, size_t len);
+
+char    *ft_strjoin(const char *s1, const char *s2);
+
+char    *ft_strtrim(const char *s);
+
+char    **ft_strsplit(const char *s, char c);
+
+char    *ft_itoa(int n);
+
+void    ft_putchar(char c);
+
+void    ft_putstr(const char *s);
+
+void    ft_strrev(char *str, int idx);
 
 #endif
