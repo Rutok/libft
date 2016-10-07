@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 22:11:53 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 22:28:34 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,18 @@ char    *ft_itoa(int n);
 void    ft_putchar(char c);
 
 void    ft_putstr(const char *s);
+
+void    ft_putendl(const char *s);
+
+void    ft_putnbr(int nb);
+
+void    ft_putchar_fd(char c, int fd);
+
+void    ft_putstr_fd(const char *s, int fd);
+
+void    ft_putendl_fd(const char *s, int fd);
+
+void    ft_putnbr_fd(int n, int fd);
 
 void    ft_strrev(char *str, int idx);
 
