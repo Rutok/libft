@@ -2,7 +2,7 @@ NAME = libft.a
 
 FLG = -Wall -Wextra -Werror
 
-SRC =	ft_atoi.c \
+SRC = ft_atoi.c \
 		ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -31,7 +31,7 @@ SRC =	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c
 
-all: $(NAME)
+all: $(NAME) fclean
 
 $(NAME):
 	gcc -c $(FLG) $(SRC)
