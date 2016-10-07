@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 16:35:42 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/07 16:52:25 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ size_t  ft_strlen(const char *str);
 char    *ft_strdup(const char *str);
 
 char    *ft_strcpy(char *dest, const char *src);
+
+char    *ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif
