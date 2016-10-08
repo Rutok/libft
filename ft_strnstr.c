@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 18:29:30 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 11:26:35 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 18:08:13 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 			t_n++;
 		if (*t_n == '\0')
 			return (oc);
-		h = (const char *)(oc + 1);
+		if (*h)
+			h = (const char *)(oc + 1);
 		i = t + 1;
 	}
 	return (NULL);

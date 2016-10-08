@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 21:05:15 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 11:28:40 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 16:42:27 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ char	*ft_strtrim(const char *s)
 	size_t	i;
 
 	i = 0;
-	while (!s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
+	while (s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i++;
 	beg = i;
-	end = i++;
+	end = i;
 	while (s[i])
 	{
 		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
 			end = i;
 		i++;
 	}
-	return (ft_strsub(s, (unsigned int)beg, end - beg));
+	return (ft_strsub(s, (unsigned int)beg, end - beg + 1));
 }
