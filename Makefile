@@ -1,5 +1,5 @@
 NAME = libft.a 
-
+CC = gcc $(FLG)
 FLG = -Wall -Wextra -Werror
 
 SRC = ft_atoi.c \
@@ -60,14 +60,41 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc -c $(FLG) $(SRC)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	@if ar rc $@ $^ ; then \
+		echo "Linking" [ $(NAME) ] [ $(SUCCESS) ] ; \
+	else \
+		echo "Linking" [ $(NAME) ] [ $(FAILURE) ] ; \
+	fi
+	@if ranlib $@ ; then \
+		echo "Indexing" [ $(NAME) ] [ $(SUCCESS) ] ; \
+	else \
+		echo "Indexing" [ $(NAME) ] [ $(FAILURE) ] ; \
+	fi
+
+%.o: %.c 
+	@if $(CC) -c -o $@ $< ; then \
+		echo "Compiling" [ $< ] [ $(OK) ] ; \
+	else \
+		echo "Compiling" [ $< ] [ $(FAILURE) ] ; \
+	fi
 
 clean:
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 fclean: clean
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 re: clean all
+
+# COLORS
+C_NO	=	"\033[00m"
+C_OK	=	"\033[35m"
+C_GOOD	=	"\033[32m"
+C_ERROR	=	"\033[31m"
+C_WARN	=	"\033[33m"
+
+# DBG MESSAGE
+SUCCESS	=	$(C_GOOD)SUCCESS$(C_NO)
+OK	= $(C_OK)OK$(C_NO)
+FAILURE = $(C_ERROR)FAILURE$(C_NO)
