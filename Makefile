@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2016/10/08 14:15:03 by nboste           ###   ########.fr       *#
+#*   Updated: 2016/10/08 18:16:33 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -90,13 +90,15 @@ obj/%.o: %.c
 		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 
-clean:
-	@rm -f $(NAME)
+clean: fclean
+	@rm -rf $(NAME)
 
-fclean: clean
-	@rm -f $(OBJ)
+fclean:
+	@rm -rf $(OBJ)
 
 re: clean all
+
+.PHONY = clean fclean all
 
 # COLORS
 C_NO	=	"\033[00m"
