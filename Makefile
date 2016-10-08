@@ -1,7 +1,6 @@
 NAME = libft.a 
 CC = gcc $(FLG)
 FLG = -Wall -Wextra -Werror
-
 SRC = ft_atoi.c \
 	ft_bzero.c \
 	ft_isalnum.c \
@@ -54,9 +53,8 @@ SRC = ft_atoi.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
-	ft_toupper.c \
-
-OBJ = $(SRC:.c=.o)
+	ft_toupper.c 
+OBJ = $(SRC:%.c=obj/%.o)
 
 all: $(NAME)
 
@@ -72,7 +70,8 @@ $(NAME): $(OBJ)
 		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 
-%.o: %.c 
+obj/%.o: %.c 
+	@mkdir -p obj
 	@if $(CC) -c -o $@ $< ; then \
 		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(OK) ] ; \
 	else \
