@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 21:49:01 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 16:22:10 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 18:23:21 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_get_str_size(int n)
 	return (i + neg);
 }
 
-static char		*ft_zero_str()
+static char		*ft_zero_str(void)
 {
 	char	*s;
 
@@ -46,7 +46,7 @@ char			*ft_itoa(int n)
 	unsigned int	nb;
 
 	if (n == 0)
-		return ft_zero_str();
+		return (ft_zero_str());
 	i = ft_get_str_size(n);
 	if (!(str = (char *)ft_strnew(sizeof(char) * (i + 1))))
 		return (NULL);

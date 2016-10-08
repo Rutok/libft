@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 18:29:30 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 18:08:13 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 18:24:39 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,4 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 		i = t + 1;
 	}
 	return (NULL);
-
 }

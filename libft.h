@@ -6,23 +6,23 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 15:43:32 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 18:30:49 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct	s_list	*next;
-}					t_list;
+}			   t_list;
 
 void				*ft_memset(void *s, int c, size_t n);
 
@@ -56,7 +56,7 @@ char				*ft_strrchr(const char *s, int c);
 
 char				*ft_strstr(const char *big, const char *little);
 
-char				*ft_strnstr(const char *big, const char *little, size_t len);
+char				*ft_strnstr(const char *big, const char *lit, size_t len);
 
 int					ft_strcmp(const char *s1, const char *s2);
 

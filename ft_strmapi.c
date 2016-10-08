@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 20:24:46 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 11:25:23 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 18:23:59 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 
 	new = ft_strdup(s);
 	i = 0;
-	while(new[i])
+	while (new[i])
 	{
 		new[i] = f(i, new[i]);
 		i++;
