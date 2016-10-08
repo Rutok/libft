@@ -6,28 +6,28 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 21:05:15 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 21:18:13 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 11:28:40 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strtrim(const char *s)
+char	*ft_strtrim(const char *s)
 {
-    size_t  beg;
-    size_t  end;
-    size_t  i;
+	size_t	beg;
+	size_t	end;
+	size_t	i;
 
-    i = 0;
-    while (!s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
-        i++;
-    beg = i;
-    end = i++;
-    while (s[i])
-    {
-        if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-            end = i;
-        i++;
-    }
-    return (ft_strsub(s, (unsigned int)beg, end - beg));
+	i = 0;
+	while (!s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
+		i++;
+	beg = i;
+	end = i++;
+	while (s[i])
+	{
+		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
+			end = i;
+		i++;
+	}
+	return (ft_strsub(s, (unsigned int)beg, end - beg));
 }

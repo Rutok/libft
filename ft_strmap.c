@@ -6,23 +6,23 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 20:19:21 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 20:22:19 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 11:25:10 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strmap(const char *s, char (*f)(char))
+char	*ft_strmap(const char *s, char (*f)(char))
 {
-    char    *new;
-    size_t  i;
+	char	*new;
+	size_t	i;
 
-    new = ft_strdup(s);
-    i = 0;
-    while(new[i])
-    {
-        new[i] = f(new[i]);
-        i++;
-    }
-    return (new);
+	new = ft_strdup(s);
+	i = 0;
+	while(new[i])
+	{
+		new[i] = f(new[i]);
+		i++;
+	}
+	return (new);
 }

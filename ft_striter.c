@@ -6,14 +6,14 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 20:12:26 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 20:14:56 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 11:24:06 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
-    while (*s)
-        f(s++);
+	while (*s)
+		f(s++);
 }

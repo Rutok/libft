@@ -6,18 +6,18 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:20:18 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 15:04:11 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 11:20:48 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    char *b;
+	char	*b;
 
-    b = (char *)s;
-    while (n--)
-        *b++ = (char)c;
-    return (s);
+	b = (char *)s;
+	while (n--)
+		*b++ = (char)c;
+	return (s);
 }

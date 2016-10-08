@@ -6,13 +6,13 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 20:05:23 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 20:07:45 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 11:26:16 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
-    return ((char *)ft_memalloc(size + 1));
+	return ((char *)ft_memalloc(size + 1));
 }

@@ -6,16 +6,16 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 19:10:26 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/07 19:11:51 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 11:28:48 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int		ft_tolower(int c)
 {
-    if (ft_isalpha(c))
-        if (c < 91)
-            return (c + 32);
-    return (c);
+	if (ft_isalpha(c))
+		if (c < 91)
+			return (c + 32);
+	return (c);
 }
