@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2016/10/08 18:16:33 by nboste           ###   ########.fr       *#
+#*   Updated: 2016/10/08 18:42:18 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -71,34 +71,36 @@ OBJ = $(SRC:%.c=obj/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@if ar rc $@ $^ ; then \
+	if ar rc $@ $^ ; then \
 		echo "Linking" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(SUCCESS) ] ; \
 	else \
 		echo "Linking" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
-	@if ranlib $@ ; then \
+	if ranlib $@ ; then \
 		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(SUCCESS) ] ; \
 	else \
 		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 
 obj/%.o: %.c 
-	@mkdir -p obj
-	@if $(CC) -c -o $@ $< ; then \
+	mkdir -p obj
+	if $(CC) -c -o $@ $< ; then \
 		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(OK) ] ; \
 	else \
 		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 
-clean: fclean
-	@rm -rf $(NAME)
+clean:
+	rm -rf $(OBJ)
 
-fclean:
-	@rm -rf $(OBJ)
+fclean: clean
+	rm -rf $(NAME)
 
-re: clean all
+re: fclean all
 
-.PHONY = clean fclean all
+.PHONY: clean fclean all
+
+.SILENT: clean fclean all $(NAME) $(OBJ)
 
 # COLORS
 C_NO	=	"\033[00m"
