@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 21:49:01 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 18:23:21 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/08 20:31:14 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 static size_t	ft_get_str_size(int n)
 {
-	size_t	i;
-	size_t	neg;
+	size_t			i;
+	size_t			neg;
+	unsigned int	nb;
 
 	i = 0;
 	neg = n < 0 ? 1 : 0;
-	while (n)
+	nb = n < 0 ? n * -1 : n;
+	while (nb)
 	{
 		i++;
-		n = n / 10;
+		nb = nb / 10;
 	}
 	return (i + neg);
 }
