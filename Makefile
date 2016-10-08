@@ -62,21 +62,21 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@if ar rc $@ $^ ; then \
-		echo "Linking" [ $(NAME) ] [ $(SUCCESS) ] ; \
+		echo "Linking" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(SUCCESS) ] ; \
 	else \
-		echo "Linking" [ $(NAME) ] [ $(FAILURE) ] ; \
+		echo "Linking" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 	@if ranlib $@ ; then \
-		echo "Indexing" [ $(NAME) ] [ $(SUCCESS) ] ; \
+		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(SUCCESS) ] ; \
 	else \
-		echo "Indexing" [ $(NAME) ] [ $(FAILURE) ] ; \
+		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 
 %.o: %.c 
 	@if $(CC) -c -o $@ $< ; then \
-		echo "Compiling" [ $< ] [ $(OK) ] ; \
+		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(OK) ] ; \
 	else \
-		echo "Compiling" [ $< ] [ $(FAILURE) ] ; \
+		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(FAILURE) ] ; \
 	fi
 
 clean:
