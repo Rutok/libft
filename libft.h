@@ -6,14 +6,14 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/09 14:46:14 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/09 15:24:18 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
 
-# include <stddef.h>
+# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 
