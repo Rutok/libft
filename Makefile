@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2016/10/08 18:42:18 by nboste           ###   ########.fr       *#
+#*   Updated: 2016/10/09 14:46:12 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -65,7 +65,13 @@ SRC = ft_atoi.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
-	ft_toupper.c 
+	ft_toupper.c \
+	ft_lstnew.c \
+	ft_lstdelone.c \
+	ft_lstdel.c \
+	ft_lstadd.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 OBJ = $(SRC:%.c=obj/%.o)
 
 all: $(NAME)
