@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 21:26:57 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/08 21:59:39 by nboste           ###   ########.fr       */
+/*   Updated: 2016/10/09 10:32:35 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ static int	count_words_c(const char *str, char c)
 	return (count);
 }
 
+static void	move_to_next_word(const char **s, char c)
+{
+	while (**s && **s == c)
+		(*s)++;
+}
+
 char		**ft_strsplit(const char *s, char c)
 {
 	int		nb_words;
@@ -53,18 +59,16 @@ char		**ft_strsplit(const char *s, char c)
 	ret = tab;
 	while (*s)
 	{
-		while (*s && *s == c)
-			s++;
+		move_to_next_word(&s, c);
+		if (!*s)
+			break;
 		i = ft_strlen_c(s, c);
 		if (!(*tab = (char *)malloc(sizeof(char) * (i + 1))))
 			return (NULL);
 		j = 0;
-		if (*s)
-		{
-			while (j < i)
-				(*tab)[j++] = *s++;
-			(*tab++)[i] = '\0';
-		}
+		while (j < i)
+			(*tab)[j++] = *s++;
+		(*tab++)[i] = '\0';
 	}
 	*tab = 0;
 	return (ret);
