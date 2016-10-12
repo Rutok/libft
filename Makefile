@@ -74,7 +74,7 @@ SRC = ft_atoi.c \
 	ft_lstmap.c
 OBJ = $(SRC:%.c=obj/%.o)
 
-all: $(NAME)
+all: fclean $(NAME)
 
 $(NAME): $(OBJ)
 	if ar rc $@ $^ ; then \
@@ -104,7 +104,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all
+.PHONY: fclean re
 
 .SILENT: clean fclean all $(NAME) $(OBJ)
 
