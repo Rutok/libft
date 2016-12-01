@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/09 11:33:59 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/09 11:39:26 by nboste           ###   ########.fr       */
+/*   Updated: 2016/11/13 22:03:48 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,16 @@ t_list		*ft_lstnew(const void *content, size_t content_size)
 	new->next = NULL;
 	new->content = (void *)content;
 	if (content)
+	{
 		new->content_size = content_size;
+		if (!(new->content = (void *)malloc(content_size)))
+			return (NULL);
+		ft_memcpy(new->content, content, content_size);
+	}
 	else
+	{
 		new->content_size = 0;
+		new->content = NULL;
+	}
 	return (new);
 }

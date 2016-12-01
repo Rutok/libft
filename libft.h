@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/10/12 22:50:45 by nboste           ###   ########.fr       */
+/*   Updated: 2016/11/14 00:01:06 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
-	struct	s_list	*next;
+	struct s_list	*next;
 }					t_list;
 
 void				*ft_memset(void *s, int c, size_t n);
@@ -141,5 +141,27 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+int					ft_iseven(int n);
+
+int					ft_isodd(int n);
+
+typedef struct		s_pair
+{
+	double	x;
+	double	y;
+}					t_pair;
+
+t_pair				ft_pairadd(t_pair *a, t_pair *b);
+
+t_pair				ft_pairsub(t_pair *a, t_pair *b);
+
+t_pair				ft_pairmid(t_pair *a, t_pair *b);
+
+# define FT_PI 3.1415926
+
+double				ft_degtorad(double deg);
+
+double				ft_radtodeg(double rad);
 
 #endif

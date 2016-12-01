@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_pairsub.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nboste <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/07 20:24:46 by nboste            #+#    #+#             */
-/*   Updated: 2016/11/13 22:10:22 by nboste           ###   ########.fr       */
+/*   Created: 2016/11/13 23:14:06 by nboste            #+#    #+#             */
+/*   Updated: 2016/11/14 00:08:34 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+t_pair	ft_pairsub(t_pair *a, t_pair *b)
 {
-	char	*new;
-	size_t	i;
+	t_pair	r;
 
-	if (!s || !f)
-		return (NULL);
-	new = ft_strdup(s);
-	i = 0;
-	while (new && new[i])
-	{
-		new[i] = f(i, new[i]);
-		i++;
-	}
-	return (new);
+	r.x = a->x - b->x;
+	r.y = a->y - b->y;
+	return (r);
 }

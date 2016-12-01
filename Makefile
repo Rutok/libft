@@ -11,8 +11,8 @@
 #* ************************************************************************** *#
 
 NAME = libft.a 
-CC = gcc $(FLG)
 FLG = -Wall -Wextra -Werror
+CC = gcc $(FLG)
 SRC = ft_atoi.c \
 	ft_bzero.c \
 	ft_isalnum.c \
@@ -71,30 +71,22 @@ SRC = ft_atoi.c \
 	ft_lstdel.c \
 	ft_lstadd.c \
 	ft_lstiter.c \
-	ft_lstmap.c
-OBJ = $(SRC:%.c=obj/%.o)
+	ft_lstmap.c \
+	ft_iseven.c \
+	ft_isodd.c \
+	ft_pairadd.c \
+	ft_pairsub.c \
+	ft_pairmid.c \
+	ft_degtorad.c \
+	ft_radtodeg.c
+OBJ = $(SRC:%.c=%.o)
 
-all: fclean $(NAME)
+all: $(NAME)
 
-$(NAME): $(OBJ)
-	if ar rc $@ $^ ; then \
-		echo "Linking" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(SUCCESS) ] ; \
-	else \
-		echo "Linking" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
-	fi
-	if ranlib $@ ; then \
-		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(SUCCESS) ] ; \
-	else \
-		echo "Indexing" [ $(C_WARN)$(NAME)$(C_NO) ] [ $(FAILURE) ] ; \
-	fi
-
-obj/%.o: %.c 
-	mkdir -p obj
-	if $(CC) -c -o $@ $< ; then \
-		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(OK) ] ; \
-	else \
-		echo "Compiling" [ $(C_WARN)$<$(C_NO) ] [ $(FAILURE) ] ; \
-	fi
+$(NAME):
+	$(CC) -c $(SRC)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	rm -rf $(OBJ)
@@ -104,18 +96,6 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: fclean re
+.PHONY: re
 
 .SILENT: clean fclean all $(NAME) $(OBJ)
-
-# COLORS
-C_NO	=	"\033[00m"
-C_OK	=	"\033[35m"
-C_GOOD	=	"\033[32m"
-C_ERROR	=	"\033[31m"
-C_WARN	=	"\033[33m"
-
-# DBG MESSAGE
-SUCCESS	=	$(C_GOOD)SUCCESS$(C_NO)
-OK	= $(C_OK)OK$(C_NO)
-FAILURE = $(C_ERROR)FAILURE$(C_NO)
