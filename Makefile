@@ -84,7 +84,7 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME):
-	$(CC) -c $(SRC)
+	$(CC) -c $(SRC) -I ./includes/
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
