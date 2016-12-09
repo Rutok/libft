@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2016/10/09 14:46:12 by nboste           ###   ########.fr       *#
+#*   Updated: 2016/12/09 04:59:41 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -78,7 +78,8 @@ SRC = ft_atoi.c \
 	ft_pairsub.c \
 	ft_pairmid.c \
 	ft_degtorad.c \
-	ft_radtodeg.c
+	ft_radtodeg.c \
+	get_next_line.c
 OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
