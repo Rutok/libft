@@ -6,14 +6,14 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/12/20 16:27:35 by nboste           ###   ########.fr       */
+/*   Updated: 2016/12/20 16:35:28 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
 
-# include "types.h"
+# include "ft_types.h"
 
 void				*ft_memset(void *s, int c, size_t n);
 
