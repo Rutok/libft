@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2016/12/09 04:59:41 by nboste           ###   ########.fr       *#
+#*   Updated: 2016/12/20 16:28:53 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -74,9 +74,6 @@ SRC = ft_atoi.c \
 	ft_lstmap.c \
 	ft_iseven.c \
 	ft_isodd.c \
-	ft_pairadd.c \
-	ft_pairsub.c \
-	ft_pairmid.c \
 	ft_degtorad.c \
 	ft_radtodeg.c \
 	get_next_line.c

@@ -1,0 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   types.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/12/20 16:25:06 by nboste            #+#    #+#             */
+/*   Updated: 2016/12/20 16:27:24 by nboste           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef TYPES_H
+# define TYPES_H
+
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+# define FT_PI 3.1415926
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
+typedef unsigned char	t_bool;
+
+typedef unsigned int	uint32;
+
+typedef struct	s_2ipair
+{
+	int	x;
+	int	y;
+}				t_2ipair;
+
+typedef struct	s_2dpair
+{
+	double	x;
+	double	y;
+}				t_2dpair;
+
+typedef struct	s_3dvertex
+{
+	double	x;
+	double	y;
+	double	z;
+}				t_3dvertex;
+
+#endif

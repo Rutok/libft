@@ -6,23 +6,14 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/11/14 00:01:06 by nboste           ###   ########.fr       */
+/*   Updated: 2016/12/20 16:27:35 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
 
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+# include "types.h"
 
 void				*ft_memset(void *s, int c, size_t n);
 
@@ -145,20 +136,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_iseven(int n);
 
 int					ft_isodd(int n);
-
-typedef struct		s_pair
-{
-	double	x;
-	double	y;
-}					t_pair;
-
-t_pair				ft_pairadd(t_pair *a, t_pair *b);
-
-t_pair				ft_pairsub(t_pair *a, t_pair *b);
-
-t_pair				ft_pairmid(t_pair *a, t_pair *b);
-
-# define FT_PI 3.1415926
 
 double				ft_degtorad(double deg);
 
