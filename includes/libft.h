@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/06 21:21:09 by nboste            #+#    #+#             */
-/*   Updated: 2016/12/20 16:35:28 by nboste           ###   ########.fr       */
+/*   Updated: 2016/12/23 08:25:21 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,5 +140,7 @@ int					ft_isodd(int n);
 double				ft_degtorad(double deg);
 
 double				ft_radtodeg(double rad);
+
+void				ft_free(void *v, size_t s);
 
 #endif
