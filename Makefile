@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2016/12/20 16:28:53 by nboste           ###   ########.fr       *#
+#*   Updated: 2017/01/16 03:11:02 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -72,6 +72,7 @@ SRC = ft_atoi.c \
 	ft_lstadd.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
+	ft_lst_push_back.c \
 	ft_iseven.c \
 	ft_isodd.c \
 	ft_degtorad.c \
