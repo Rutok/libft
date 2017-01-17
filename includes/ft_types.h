@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 16:38:36 by nboste            #+#    #+#             */
-/*   Updated: 2016/12/20 16:38:56 by nboste           ###   ########.fr       */
+/*   Updated: 2017/01/18 00:41:45 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,34 @@
 
 # define FT_PI 3.1415926
 
-typedef struct		s_list
+typedef struct			s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}					t_list;
+}						t_list;
 
 typedef unsigned char	t_bool;
 
-typedef unsigned int	uint32;
+typedef unsigned int	t_uint32;
 
-typedef struct	s_2ipair
+typedef struct			s_2ipair
 {
 	int	x;
 	int	y;
-}				t_2ipair;
+}						t_2ipair;
 
-typedef struct	s_2dpair
+typedef struct			s_2dpair
 {
 	double	x;
 	double	y;
-}				t_2dpair;
+}						t_2dpair;
 
-typedef struct	s_3dvertex
+typedef struct			s_3dvertex
 {
 	double	x;
 	double	y;
 	double	z;
-}				t_3dvertex;
+}						t_3dvertex;
 
 #endif
