@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 16:38:36 by nboste            #+#    #+#             */
-/*   Updated: 2017/01/18 00:41:45 by nboste           ###   ########.fr       */
+/*   Updated: 2017/02/19 07:41:13 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ typedef struct			s_list
 typedef unsigned char	t_bool;
 
 typedef unsigned int	t_uint32;
+
+typedef unsigned int	uint32;
 
 typedef struct			s_2ipair
 {

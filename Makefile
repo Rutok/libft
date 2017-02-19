@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2017/01/16 03:11:02 by nboste           ###   ########.fr       *#
+#*   Updated: 2017/02/19 07:41:35 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -83,7 +83,7 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME):
-	$(CC) -c $(SRC) -I ./includes/
+	$(CC) -c $(SRC) -I ./includes/ -O3 -flto
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
