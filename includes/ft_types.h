@@ -6,7 +6,7 @@
 /*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 16:38:36 by nboste            #+#    #+#             */
-/*   Updated: 2017/02/19 07:41:13 by nboste           ###   ########.fr       */
+/*   Updated: 2017/03/03 23:24:17 by nboste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ typedef struct			s_2dpair
 	double	x;
 	double	y;
 }						t_2dpair;
+
+typedef struct			s_3itriplet
+{
+	int		a;
+	int		b;
+	int		c;
+}						t_3itriplet;
 
 typedef struct			s_3dvertex
 {
