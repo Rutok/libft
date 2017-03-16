@@ -6,7 +6,7 @@
 #*   By: nboste <nboste@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/10/08 14:14:58 by nboste            #+#    #+#             *#
-#*   Updated: 2017/02/19 07:41:35 by nboste           ###   ########.fr       *#
+#*   Updated: 2017/03/16 09:12:13 by nboste           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -77,13 +77,14 @@ SRC = ft_atoi.c \
 	ft_isodd.c \
 	ft_degtorad.c \
 	ft_radtodeg.c \
-	get_next_line.c
+	get_next_line.c \
+
 OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) -c $(SRC) -I ./includes/ -O3 -flto
+	$(CC) -c $(SRC) -I ./includes/ -O3
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
